@@ -11,6 +11,7 @@ function fetchData(query) {
 // Debounced version of the fetchData function
 const debouncedFetchData = debounce(fetchData, 1000);
 
+// Set up an event listener on the search input
 document.getElementById("search-input").addEventListener("input", (event) => {
   const query = event.target.value;
   debouncedFetchData(query);
